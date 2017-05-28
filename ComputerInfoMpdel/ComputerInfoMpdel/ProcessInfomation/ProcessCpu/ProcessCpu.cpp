@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include <Windows.h>
 
-#include <assert.h>
+#include <ASSERT.h>
 #include "ProcessCpu.h"
 
 /// Ê±¼ä×ª»»
@@ -9,7 +9,7 @@ uint64_t CProcessCpuUse::file_time_2_utc(const FILETIME* ftime)
 {
 	LARGE_INTEGER li;
 
-	assert(ftime);
+	ASSERT(ftime);
 	li.LowPart = ftime->dwLowDateTime;
 	li.HighPart = ftime->dwHighDateTime;
 	return li.QuadPart;
@@ -53,7 +53,7 @@ int CProcessCpuUse::get_cpu_usage()
 	if (!GetProcessTimes(GetCurrentProcess(), &creation_time, &exit_time,
 		&kernel_time, &user_time))
 	{
-		// We don't assert here because in some cases (such as in the TaskManager)
+		// We don't ASSERT here because in some cases (such as in the TaskManager)
 		// we may call this function on a process that has just exited but we have
 		// not yet received the notification.
 		return -1;
@@ -75,7 +75,7 @@ int CProcessCpuUse::get_cpu_usage()
 	system_time_delta = system_time - last_system_time_;
 	time_delta = time - last_time_;
 
-	assert(time_delta != 0);
+	ASSERT(time_delta != 0);
 
 	if (time_delta == 0)
 		return -1;

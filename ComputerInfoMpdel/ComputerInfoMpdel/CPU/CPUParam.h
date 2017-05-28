@@ -10,9 +10,9 @@ using namespace std;
 #else // for Load-Time Dynamic Linking
 #include "WinRing0/source/dll/OlsApi.h"
 #ifdef _M_X64
-#pragma comment(lib, "..//Release//WinRing0x64.lib")
+#pragma comment(lib, "..//Ring0//WinRing0x64.lib")
 #else
-#pragma comment(lib, "..//Release//WinRing0.lib")
+#pragma comment(lib, "..//Ring0//WinRing0.lib")
 #endif
 #endif
 

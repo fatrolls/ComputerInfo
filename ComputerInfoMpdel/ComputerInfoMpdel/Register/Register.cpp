@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 #include "Register.h"
-#include <cassert>
+#include <cASSERT>
 
 #ifndef	_REGISTER_CPP
 #define _REGISTER_CPP
@@ -25,8 +25,8 @@ CRegister::~CRegister()
 // 创建键值
 HREGKEY CRegister::CreateRegKey(HREGROOTKEY _hkey, LPCTSTR subkey, REGCREATEKEYPARAM* _lpRegCeateKeyParam)
 {
-	assert(_hkey);
-	assert(subkey);
+	ASSERT(_hkey);
+	ASSERT(subkey);
 
 	LONG lReturn = RegCreateKeyEx(_hkey, subkey,
 		_lpRegCeateKeyParam->_Reserved,
@@ -47,8 +47,8 @@ HREGKEY CRegister::CreateRegKey(HREGROOTKEY _hkey, LPCTSTR subkey, REGCREATEKEYP
 // 读写形式打开注册表
 HREGKEY CRegister::OpenRegKey(HREGROOTKEY _hkey, LPCTSTR _subkey, DWORD ulOptions, REGSAM samDesired)
 {
-	assert(_hkey);
-	assert(_subkey);
+	ASSERT(_hkey);
+	ASSERT(_subkey);
 
 	HREGKEY hKey;
 	long lReturn = RegOpenKeyEx(_hkey, _subkey, ulOptions, samDesired, &hKey);
@@ -65,8 +65,8 @@ HREGKEY CRegister::OpenRegKey(HREGROOTKEY _hkey, LPCTSTR _subkey, DWORD ulOption
 // 键值是否存在
 bool CRegister::IsRegValueExisted(HREGROOTKEY _hkey, LPCTSTR _subkey, LPCTSTR pValName)
 {
-	assert(_hkey);
-	assert(_subkey);
+	ASSERT(_hkey);
+	ASSERT(_subkey);
 
 	bool bRet = false;
 	DWORD dwType = REG_SZ;
@@ -85,8 +85,8 @@ bool CRegister::IsRegValueExisted(HREGROOTKEY _hkey, LPCTSTR _subkey, LPCTSTR pV
 // 注册表项是不是存在
 long IsRegItemExited(HREGROOTKEY _hkey, LPCSTR _subkey)
 {
-	assert(_hkey);
-	assert(_subkey);
+	ASSERT(_hkey);
+	ASSERT(_subkey);
 	HREGKEY hKey;
 	return RegOpenKeyEx(_hkey, (LPCWSTR)_subkey, 0UL, KEY_ALL_ACCESS, &hKey);
 }
@@ -98,8 +98,8 @@ long IsRegItemExited(HREGROOTKEY _hkey, LPCSTR _subkey)
 
 bool CRegister::SaveRegKey(HREGROOTKEY _hkey, LPCTSTR lpFileName, LPSECURITY_ATTRIBUTES lpSecurityAttributes)
 {
-	assert(_hkey);
-	assert(lpFileName);
+	ASSERT(_hkey);
+	ASSERT(lpFileName);
 
 	long lReturn = RegSaveKey(_hkey, lpFileName, lpSecurityAttributes);
 
@@ -113,8 +113,8 @@ bool CRegister::SaveRegKey(HREGROOTKEY _hkey, LPCTSTR lpFileName, LPSECURITY_ATT
 
 bool CRegister::RestoreRegKey(HREGROOTKEY _hkey, LPCTSTR lpFileName, DWORD dwFlags)
 {
-	assert(_hkey);
-	assert(lpFileName);
+	ASSERT(_hkey);
+	ASSERT(lpFileName);
 
 	long lReturn = RegRestoreKey(_hkey, lpFileName, dwFlags);
 
@@ -129,8 +129,8 @@ bool CRegister::RestoreRegKey(HREGROOTKEY _hkey, LPCTSTR lpFileName, DWORD dwFla
 
 bool CRegister::DeleteRegKey(HREGKEY _hkey, LPCTSTR lpSubKey)
 {
-	assert(_hkey);
-	assert(lpSubKey);
+	ASSERT(_hkey);
+	ASSERT(lpSubKey);
 
 	long lReturn = RegDeleteValue(_hkey, lpSubKey);
 
@@ -143,8 +143,8 @@ bool CRegister::DeleteRegKey(HREGKEY _hkey, LPCTSTR lpSubKey)
 
 bool CRegister::DeleteRegValue(HREGKEY _hkey, LPCTSTR lpValueName)
 {
-	assert(_hkey);
-	assert(lpValueName);
+	ASSERT(_hkey);
+	ASSERT(lpValueName);
 
 	long lReturn = RegDeleteValue(_hkey, lpValueName);
 
@@ -157,9 +157,9 @@ bool CRegister::DeleteRegValue(HREGKEY _hkey, LPCTSTR lpValueName)
 
 bool CRegister::ReadReg(HREGKEY _hkey, LPCTSTR lpValueName, LPTSTR* lpszVal)
 {
-	assert(_hkey);
-	assert(lpValueName);
-	/*assert(lpszVal);
+	ASSERT(_hkey);
+	ASSERT(lpValueName);
+	/*ASSERT(lpszVal);
 	lpszVal = 0;*/
 
 	DWORD dwType;
@@ -180,9 +180,9 @@ bool CRegister::ReadReg(HREGKEY _hkey, LPCTSTR lpValueName, LPTSTR* lpszVal)
 
 bool CRegister::ReadReg(HREGKEY _hkey, LPCTSTR lpValueName, DWORD* lpdwVal)
 {
-	assert(_hkey);
-	assert(lpValueName);
-	assert(lpdwVal);
+	ASSERT(_hkey);
+	ASSERT(lpValueName);
+	ASSERT(lpdwVal);
 
 	DWORD dwType;
 	DWORD dwSize = sizeof(DWORD);
@@ -203,8 +203,8 @@ bool CRegister::ReadReg(HREGKEY _hkey, LPCTSTR lpValueName, DWORD* lpdwVal)
 
 bool CRegister::ReadReg(HREGKEY _hkey, LPCTSTR lpValueName, int* lpnVal)
 {
-	assert(_hkey);
-	assert(lpValueName);
+	ASSERT(_hkey);
+	ASSERT(lpValueName);
 
 	DWORD dwType;
 	DWORD dwSize = sizeof(DWORD);
@@ -224,9 +224,9 @@ bool CRegister::ReadReg(HREGKEY _hkey, LPCTSTR lpValueName, int* lpnVal)
 
 bool CRegister::WriteReg(HREGKEY _hkey, LPCTSTR  lpValueName, LPCTSTR  lpValue)
 {
-	assert(_hkey);
-	assert(lpValueName);
-	assert(lpValue);
+	ASSERT(_hkey);
+	ASSERT(lpValueName);
+	ASSERT(lpValue);
 
 	long lReturn = RegSetValueEx(_hkey, lpValueName, 0L, REG_SZ, (const BYTE *)lpValue, strlen((const char *)lpValue) + 1);
 
@@ -243,8 +243,8 @@ bool CRegister::WriteReg(HREGKEY _hkey, LPCTSTR  lpValueName, LPCTSTR  lpValue)
 
 bool CRegister::WriteReg(HREGKEY _hkey, LPCTSTR lpSubKey, DWORD dwValue)
 {
-	assert(_hkey);
-	assert(lpSubKey);
+	ASSERT(_hkey);
+	ASSERT(lpSubKey);
 
 	long lReturn = RegSetValueEx(_hkey, lpSubKey, 0L, REG_DWORD, (const BYTE *)&dwValue, sizeof(DWORD));
 
@@ -261,8 +261,8 @@ bool CRegister::WriteReg(HREGKEY _hkey, LPCTSTR lpSubKey, DWORD dwValue)
 
 bool CRegister::WriteReg(HREGKEY _hkey, LPCTSTR lpSubKey, int nVal)
 {
-	assert(_hkey);
-	assert(lpSubKey);
+	ASSERT(_hkey);
+	ASSERT(lpSubKey);
 
 	DWORD dwValue;
 	dwValue = (DWORD)nVal;
