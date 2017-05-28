@@ -1,0 +1,98 @@
+Microsoft (R) Macro Assembler (x64) Version 12.00.21005.1   05/13/17 17:19:08
+E:\Code\ÎÄµµ\Project_All\Model-new-computer-bchs\ComputerInfoMpdel\ComputerInfoMpdel\CPU\WinRing0\source\dll\CpuidX64.asm  Page 1 - 1
+
+
+				;;-----------------------------------------------------------------------------
+				;;     Author : habe (NujiNuji/MikoMiko)
+				;;       Mail : ----------------------
+				;;        Web : http://openlibsys.org/
+				;;    License : The modified BSD license
+				;;
+				;;                                    Copyright 2006 habe. All rights reserved.
+				;;                          Copyright 2009 OpenLibSys.org. All rights reserved.
+				;;-----------------------------------------------------------------------------
+				;; CPUID.ASM - by NujiNuji (MikoMiko)
+				;; $Id$
+
+
+ 00000000				.code
+				;; typedef unsigned int uint32;
+				;; typedef unsigned __int64 uint64;
+				;; assert(sizeof(uint32)*8 == 32);
+				;; assert(sizeof(uint64)*8 == 64);
+
+				;; void __fastcall CPUIDx64(DWORD index, DWORD *pEAX, DWORD *pEBX, DWORD *pECX, DWORD *pEDX);
+ 00000000			_CPUIDx64	PROC
+ 00000000  55				PUSH	RBP
+ 00000001  48/ 8B EC			MOV	RBP, RSP
+
+					;; RSP+30H [edx]
+					;; RSP+28H [ROOM FOR ecx]
+					;; RSP+20H [ROOM FOR ebx]
+					;; RSP+18H [ROOM FOR eax]
+					;; RSP+14H [PADDING FOR index]
+					;; RSP+10H [ROOM FOR index]
+					;; RSP+08H [RETURN-ADDRESS]
+					;; RSP+00H [RBP]
+					;; RBP == RSP
+ 00000004  89 4D 10			MOV	DWORD PTR [RBP+10H], ECX
+ 00000007  C7 45 14			MOV	DWORD PTR [RBP+14H], 0
+	   00000000
+ 0000000E  48/ 89 55 18			MOV	QWORD PTR [RBP+18H], RDX
+ 00000012  4C/ 89 45 20			MOV	QWORD PTR [RBP+20H], R8
+ 00000016  4C/ 89 4D 28			MOV	QWORD PTR [RBP+28H], R9
+
+					;; RCX, RDX are volatile
+ 0000001A  53				PUSH	RBX
+ 0000001B  57				PUSH	RDI
+
+ 0000001C  8B 45 10			MOV	EAX, DWORD PTR [RBP+10H]
+ 0000001F  48/ C7 C1			MOV	RCX, 0
+	   00000000
+
+ 00000026  0F A2			CPUID
+
+					;; EDI = pEAX;
+ 00000028  48/ 8B 7D 18			MOV	RDI, QWORD PTR [RBP+18H]
+					;; *EDI = EAX;
+ 0000002C  89 07			MOV	DWORD PTR [RDI], EAX
+
+					;; *pEBX = EBX;
+ 0000002E  48/ 8B 7D 20			MOV	RDI, QWORD PTR [RBP+20H]
+ 00000032  89 1F			MOV	DWORD PTR [RDI], EBX
+
+					;; *pECX = ECX;
+ 00000034  48/ 8B 7D 28			MOV	RDI, QWORD PTR [RBP+28H]
+ 00000038  89 0F			MOV	DWORD PTR [RDI], ECX
+
+					;; *pEDX = EDX
+ 0000003A  48/ 8B 7D 30			MOV	RDI, QWORD PTR [RBP+30H]
+ 0000003E  89 17			MOV	DWORD PTR [RDI], EDX
+
+ 00000040  5F				POP	RDI
+ 00000041  5B				POP	RBX
+
+ 00000042  48/ 33 C0			XOR	RAX, RAX
+ 00000045  5D				POP	RBP
+ 00000046  C3				RET
+ 00000047			_CPUIDx64	ENDP
+
+
+					PUBLIC	_CPUIDx64
+
+					END
+				;; THE END OF FILE
+Microsoft (R) Macro Assembler (x64) Version 12.00.21005.1   05/13/17 17:19:08
+E:\Code\ÎÄµµ\Project_All\Model-new-computer-bchs\ComputerInfoMpdel\ComputerInfoMpdel\CPU\WinRing0\source\dll\CpuidX64.asm  Symbols 2 - 1
+
+
+
+
+Procedures, parameters, and locals:
+
+                N a m e                 Type     Value    Attr
+
+_CPUIDx64  . . . . . . . . . . .	P 	 00000000 _TEXT	Length= 00000047 Public
+
+	   0 Warnings
+	   0 Errors

@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="CPU">
+      <UniqueIdentifier>{ecc133ee-47bb-42e7-8169-05e58905e0d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CPU\CpuCache">
+      <UniqueIdentifier>{e8564dfa-b8ae-447e-aca9-e4e4efad8e4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CharaSet">
+      <UniqueIdentifier>{3aa0b32b-06ab-4774-a34a-ffe50c9eadd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CharaSet\CharaseChange">
+      <UniqueIdentifier>{99a0f565-3010-461c-9384-5ca0a6166149}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SysVersion">
+      <UniqueIdentifier>{c9eea846-724d-4ac6-8cad-a97f63e7ccb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Password">
+      <UniqueIdentifier>{011a46d2-aa0f-4fcd-bc9b-4fb6604b7a0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Server">
+      <UniqueIdentifier>{641f1ae8-d184-466c-8b77-e0dc5385561e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Server\WinService">
+      <UniqueIdentifier>{743810b9-604a-4aee-9c45-a719805bf3d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Memory">
+      <UniqueIdentifier>{380121a7-40cf-482b-b4c5-268a575afd8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Memory\MeyParam">
+      <UniqueIdentifier>{72f77cac-dfa3-4e8e-a87b-c289f736ab10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Memory\MeyHard">
+      <UniqueIdentifier>{0b6bf3f8-1974-4975-b78b-fb91b23f0c5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IsCurrentUserLocalAdministrator">
+      <UniqueIdentifier>{af22b6d3-16d8-4192-968f-e76a5227b5a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ProcessInfomation">
+      <UniqueIdentifier>{1c03d9ac-dc96-4561-8bd9-76218bec8edd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ProcessInfomation\ProcessCpu">
+      <UniqueIdentifier>{0a3d3396-5d9d-431b-a532-37a37188cda6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ProcessInfomation\Psapi">
+      <UniqueIdentifier>{dcae9264-f845-41a2-8027-f1b21bf3cfd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ProcessInfomation\psapiAnys">
+      <UniqueIdentifier>{bf0e74bb-4c9e-4b9e-b78b-e399a4329a00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Register">
+      <UniqueIdentifier>{796bd646-ba8d-485e-92c2-b102b09f7d12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Register\OpearRegister">
+      <UniqueIdentifier>{455733b4-e609-4113-89a9-72d8cb693f9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Register\CleanRegister">
+      <UniqueIdentifier>{b415a2ca-4db9-481f-87d5-6919210c9606}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Register\InstallPrgmReg">
+      <UniqueIdentifier>{09c11213-0d8c-40b7-9e76-d06334376870}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Time">
+      <UniqueIdentifier>{e0e6d802-88f1-47af-a77d-781d9ee6f9f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Time\Clock">
+      <UniqueIdentifier>{a537085e-abc8-409a-96d4-8f26b7d6bcc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Time\SimpleTimer">
+      <UniqueIdentifier>{04c959a9-9fe3-4798-a3ea-d07f2d050d9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="USB">
+      <UniqueIdentifier>{d0f9c9d5-13af-4ce1-a44d-c720462c8290}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Register\32Enum64Reg">
+      <UniqueIdentifier>{10f664ce-19c5-4c65-9600-7958ccc926d5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ComputerInfoMpdel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CPU\CPUParam.h">
+      <Filter>CPU</Filter>
+    </ClInclude>
+    <ClInclude Include="CPU\CpuCache\CpuCache.h">
+      <Filter>CPU\CpuCache</Filter>
+    </ClInclude>
+    <ClInclude Include="SysVersion\SysVerInfo.h">
+      <Filter>SysVersion</Filter>
+    </ClInclude>
+    <ClInclude Include="CharaSet\CharaseChange\AscIIToMutlipleCharaset.h">
+      <Filter>CharaSet\CharaseChange</Filter>
+    </ClInclude>
+    <ClInclude Include="CharaSet\CharaseChange\MutlipleByteToAscII.h">
+      <Filter>CharaSet\CharaseChange</Filter>
+    </ClInclude>
+    <ClInclude Include="Password\GetPassword.h">
+      <Filter>Password</Filter>
+    </ClInclude>
+    <ClInclude Include="Password\process.h">
+      <Filter>Password</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\ServerParam.h">
+      <Filter>Server</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\WinService\WinService.h">
+      <Filter>Server\WinService</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory\MeyParam\MemoryParam.h">
+      <Filter>Memory\MeyParam</Filter>
+    </ClInclude>
+    <ClInclude Include="Define.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="IsCurrentUserLocalAdministrator\IsCurrentUserLocalAdministrator.h">
+      <Filter>IsCurrentUserLocalAdministrator</Filter>
+    </ClInclude>
+    <ClInclude Include="ProcessInfomation\ProcessCpu\ProcessCpu.h">
+      <Filter>ProcessInfomation\ProcessCpu</Filter>
+    </ClInclude>
+    <ClInclude Include="ProcessInfomation\Psapi\Psapi.h">
+      <Filter>ProcessInfomation\Psapi</Filter>
+    </ClInclude>
+    <ClInclude Include="ProcessInfomation\psapiAnys\procanalyze.h">
+      <Filter>ProcessInfomation\psapiAnys</Filter>
+    </ClInclude>
+    <ClInclude Include="Register\Register.h">
+      <Filter>Register</Filter>
+    </ClInclude>
+    <ClInclude Include="Register\OpearRegister\OpearRegister.h">
+      <Filter>Register\OpearRegister</Filter>
+    </ClInclude>
+    <ClInclude Include="Register\CleanRegister\RegisterClean.h">
+      <Filter>Register\CleanRegister</Filter>
+    </ClInclude>
+    <ClInclude Include="Register\InstallPrgmReg\InstallPrgmReg.h">
+      <Filter>Register\InstallPrgmReg</Filter>
+    </ClInclude>
+    <ClInclude Include="Time\MicrosecondTime.h">
+      <Filter>Time</Filter>
+    </ClInclude>
+    <ClInclude Include="Time\SetSysTimeFrInet.h">
+      <Filter>Time</Filter>
+    </ClInclude>
+    <ClInclude Include="Register\InstallPrgmReg\ClockTikt.h">
+      <Filter>Time\Clock</Filter>
+    </ClInclude>
+    <ClInclude Include="Register\InstallPrgmReg\SimpleTimer.h">
+      <Filter>Time\SimpleTimer</Filter>
+    </ClInclude>
+    <ClInclude Include="USB\USBDevice.h">
+      <Filter>USB</Filter>
+    </ClInclude>
+    <ClInclude Include="Register\32Enum64Reg\32Enum64Reg.h">
+      <Filter>Register\32Enum64Reg</Filter>
+    </ClInclude>
+    <ClInclude Include="CPU\ccpuid.h">
+      <Filter>CPU</Filter>
+    </ClInclude>
+    <ClInclude Include="CPU\testccpuid.h">
+      <Filter>CPU</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ComputerInfoMpdel.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CPU\CpuCache\CpuCache.cpp">
+      <Filter>CPU\CpuCache</Filter>
+    </ClCompile>
+    <ClCompile Include="SysVersion\SysVerInfo.cpp">
+      <Filter>SysVersion</Filter>
+    </ClCompile>
+    <ClCompile Include="CharaSet\CharaseChange\AscIIToMutlipleCharaset.cpp">
+      <Filter>CharaSet\CharaseChange</Filter>
+    </ClCompile>
+    <ClCompile Include="CharaSet\CharaseChange\MutilpleByteToAscII.cpp">
+      <Filter>CharaSet\CharaseChange</Filter>
+    </ClCompile>
+    <ClCompile Include="Password\GetPassword.cpp">
+      <Filter>Password</Filter>
+    </ClCompile>
+    <ClCompile Include="Password\process.cpp">
+      <Filter>Password</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\ServerParam.cpp">
+      <Filter>Server</Filter>
+    </ClCompile>
+    <ClCompile Include="Memory\MeyParam\MemoryParam.cpp">
+      <Filter>Memory\MeyParam</Filter>
+    </ClCompile>
+    <ClCompile Include="IsCurrentUserLocalAdministrator\IsCurrentUserLocalAdministrator.cpp">
+      <Filter>IsCurrentUserLocalAdministrator</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessInfomation\ProcessCpu\ProcessCpu.cpp">
+      <Filter>ProcessInfomation\ProcessCpu</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessInfomation\psapiAnys\procanalyze.cpp">
+      <Filter>ProcessInfomation\psapiAnys</Filter>
+    </ClCompile>
+    <ClCompile Include="Register\Register.cpp">
+      <Filter>Register</Filter>
+    </ClCompile>
+    <ClCompile Include="Register\OpearRegister\OpearRegister.cpp">
+      <Filter>Register\OpearRegister</Filter>
+    </ClCompile>
+    <ClCompile Include="Register\CleanRegister\RegisterClean.cpp">
+      <Filter>Register\CleanRegister</Filter>
+    </ClCompile>
+    <ClCompile Include="Register\InstallPrgmReg\InstallPrgmReg.cpp">
+      <Filter>Register\InstallPrgmReg</Filter>
+    </ClCompile>
+    <ClCompile Include="CPU\ccpuid.cpp">
+      <Filter>CPU</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ComputerInfoMpdel.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="ProcessInfomation\Psapi\Psapi.Lib">
+      <Filter>ProcessInfomation\Psapi</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+</Project>

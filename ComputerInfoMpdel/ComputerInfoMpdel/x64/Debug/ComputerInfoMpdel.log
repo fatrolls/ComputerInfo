@@ -1,0 +1,65 @@
+﻿  AscIIToMutlipleCharaset.cpp
+  MutilpleByteToAscII.cpp
+  CpuCache.cpp
+  GetPassword.cpp
+Password\GetPassword.cpp(125): error C2664: “DWORD FormatMessageA(DWORD,LPCVOID,DWORD,DWORD,LPSTR,DWORD,va_list *)”: 无法将参数 5 从“wchar_t *”转换为“LPSTR”
+          与指向的类型无关；转换要求 reinterpret_cast、C 样式转换或函数样式转换
+Password\GetPassword.cpp(127): error C2664: “HMODULE GetModuleHandleA(LPCSTR)”: 无法将参数 1 从“const wchar_t [6]”转换为“LPCSTR”
+          与指向的类型无关；转换要求 reinterpret_cast、C 样式转换或函数样式转换
+Password\GetPassword.cpp(131): error C2660: “FormatMessageA”: 函数不接受 6 个参数
+Password\GetPassword.cpp(173): error C2664: “HMODULE GetModuleHandleA(LPCSTR)”: 无法将参数 1 从“WCHAR *”转换为“LPCSTR”
+          与指向的类型无关；转换要求 reinterpret_cast、C 样式转换或函数样式转换
+Password\GetPassword.cpp(343): error C2664: “HMODULE LoadLibraryA(LPCSTR)”: 无法将参数 1 从“const wchar_t [7]”转换为“LPCSTR”
+          与指向的类型无关；转换要求 reinterpret_cast、C 样式转换或函数样式转换
+Password\GetPassword.cpp(431): error C2440: “初始化”: 无法从“const char [10]”转换为“std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>”
+          无构造函数可以接受源类型，或构造函数重载决策不明确
+Password\GetPassword.cpp(441): error C2664: “int _wcsicmp(const wchar_t *,const wchar_t *)”: 无法将参数 2 从“const char [12]”转换为“const wchar_t *”
+          与指向的类型无关；转换要求 reinterpret_cast、C 样式转换或函数样式转换
+Password\GetPassword.cpp(445): error C2664: “int _wcsicmp(const wchar_t *,const wchar_t *)”: 无法将参数 2 从“const char [11]”转换为“const wchar_t *”
+          与指向的类型无关；转换要求 reinterpret_cast、C 样式转换或函数样式转换
+Password\GetPassword.cpp(578): error C2664: “HMODULE LoadLibraryA(LPCSTR)”: 无法将参数 1 从“const wchar_t [8]”转换为“LPCSTR”
+          与指向的类型无关；转换要求 reinterpret_cast、C 样式转换或函数样式转换
+Password\GetPassword.cpp(654): error C2664: “HMODULE LoadLibraryA(LPCSTR)”: 无法将参数 1 从“const wchar_t [7]”转换为“LPCSTR”
+          与指向的类型无关；转换要求 reinterpret_cast、C 样式转换或函数样式转换
+  process.cpp
+Password\process.cpp(22): error C2664: “int _stricmp(const char *,const char *)”: 无法将参数 1 从“const wchar_t *”转换为“const char *”
+          与指向的类型无关；转换要求 reinterpret_cast、C 样式转换或函数样式转换
+Password\process.cpp(35): error C2440: “初始化”: 无法从“CHAR [260]”转换为“std::wstring”
+          无构造函数可以接受源类型，或构造函数重载决策不明确
+Password\process.cpp(180): error C2664: “std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>> &std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>::assign(std::_String_const_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,std::_String_const_iterator<std::_String_val<std::_Simple_types<wchar_t>>>)”: 无法将参数 1 从“TCHAR *”转换为“std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>> &&”
+          原因如下:  无法从“TCHAR *”转换为“std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>”
+          无构造函数可以接受源类型，或构造函数重载决策不明确
+Password\process.cpp(192): error C2664: “BOOL PathIsRelativeA(LPCSTR)”: 无法将参数 1 从“const wchar_t *”转换为“LPCSTR”
+          与指向的类型无关；转换要求 reinterpret_cast、C 样式转换或函数样式转换
+Password\process.cpp(194): error C2440: “初始化”: 无法从“const char [1]”转换为“std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>”
+          无构造函数可以接受源类型，或构造函数重载决策不明确
+Password\process.cpp(197): error C2664: “LPSTR PathCombineA(LPSTR,LPCSTR,LPCSTR)”: 无法将参数 2 从“const wchar_t *”转换为“LPCSTR”
+          与指向的类型无关；转换要求 reinterpret_cast、C 样式转换或函数样式转换
+Password\process.cpp(198): error C2664: “std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>> &std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>::assign(std::_String_const_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,std::_String_const_iterator<std::_String_val<std::_Simple_types<wchar_t>>>)”: 无法将参数 1 从“TCHAR [260]”转换为“std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>> &&”
+          原因如下:  无法从“TCHAR [260]”转换为“std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>”
+          无构造函数可以接受源类型，或构造函数重载决策不明确
+Password\process.cpp(203): error C2664: “BOOL PathCanonicalizeA(LPSTR,LPCSTR)”: 无法将参数 2 从“const wchar_t *”转换为“LPCSTR”
+          与指向的类型无关；转换要求 reinterpret_cast、C 样式转换或函数样式转换
+Password\process.cpp(205): error C2664: “std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>> &std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>::assign(std::_String_const_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,std::_String_const_iterator<std::_String_val<std::_Simple_types<wchar_t>>>)”: 无法将参数 1 从“TCHAR [260]”转换为“std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>> &&”
+          原因如下:  无法从“TCHAR [260]”转换为“std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>”
+          无构造函数可以接受源类型，或构造函数重载决策不明确
+Password\process.cpp(214): error C2664: “HANDLE CreateFileA(LPCSTR,DWORD,DWORD,LPSECURITY_ATTRIBUTES,DWORD,DWORD,HANDLE)”: 无法将参数 1 从“const wchar_t *”转换为“LPCSTR”
+          与指向的类型无关；转换要求 reinterpret_cast、C 样式转换或函数样式转换
+Password\process.cpp(255): error C2440: “初始化”: 无法从“const char [1]”转换为“std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>”
+          无构造函数可以接受源类型，或构造函数重载决策不明确
+  SysVerInfo.cpp
+SysVersion\SysVerInfo.cpp(223): error C2664: “LSTATUS RegOpenKeyExA(HKEY,LPCSTR,DWORD,REGSAM,PHKEY)”: 无法将参数 2 从“LPCWSTR”转换为“LPCSTR”
+          与指向的类型无关；转换要求 reinterpret_cast、C 样式转换或函数样式转换
+SysVersion\SysVerInfo.cpp(228): error C2664: “LSTATUS RegQueryValueExA(HKEY,LPCSTR,LPDWORD,LPDWORD,LPBYTE,LPDWORD)”: 无法将参数 2 从“LPCWSTR”转换为“LPCSTR”
+          与指向的类型无关；转换要求 reinterpret_cast、C 样式转换或函数样式转换
+SysVersion\SysVerInfo.cpp(234): error C2664: “int lstrcmpiA(LPCSTR,LPCSTR)”: 无法将参数 1 从“LPCWSTR”转换为“LPCSTR”
+          与指向的类型无关；转换要求 reinterpret_cast、C 样式转换或函数样式转换
+SysVersion\SysVerInfo.cpp(242): error C2664: “int lstrcmpiA(LPCSTR,LPCSTR)”: 无法将参数 1 从“LPCWSTR”转换为“LPCSTR”
+          与指向的类型无关；转换要求 reinterpret_cast、C 样式转换或函数样式转换
+SysVersion\SysVerInfo.cpp(261): error C2664: “int lstrcmpiA(LPCSTR,LPCSTR)”: 无法将参数 1 从“LPCWSTR”转换为“LPCSTR”
+          与指向的类型无关；转换要求 reinterpret_cast、C 样式转换或函数样式转换
+SysVersion\SysVerInfo.cpp(601): error C2664: “int lstrcmpiA(LPCSTR,LPCSTR)”: 无法将参数 2 从“LPCWSTR”转换为“LPCSTR”
+          与指向的类型无关；转换要求 reinterpret_cast、C 样式转换或函数样式转换
+SysVersion\SysVerInfo.cpp(609): error C2664: “LSTATUS RegOpenKeyExA(HKEY,LPCSTR,DWORD,REGSAM,PHKEY)”: 无法将参数 2 从“LPCWSTR”转换为“LPCSTR”
+          与指向的类型无关；转换要求 reinterpret_cast、C 样式转换或函数样式转换
+  正在生成代码...
